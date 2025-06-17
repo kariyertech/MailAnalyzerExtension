@@ -319,14 +319,6 @@ This project is licensed under the MIT License. See [LICENSE](LICENSE) file for 
 
 ---
 
-## 📞 Contact
-
-- **Email**: your-email@example.com
-- **GitHub**: [github.com/yourusername](https://github.com/yourusername)
-- **Issues**: [GitHub Issues](https://github.com/yourusername/mail-security-extension/issues)
-
----
-
 <div align="center">
   <strong>🛡️ Email Security Analysis for safer email experience!</strong>
   
