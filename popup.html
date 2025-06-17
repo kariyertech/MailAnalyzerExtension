@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Mail Güvenlik Analizi</title>
+    <style>
+        body {
+            width: 450px;
+            min-height: 600px;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .container {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-left: 10px;
+        }
+
+        .vt-logo {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+        }
+
+        .status {
+            background: #e8f5e8;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            text-align: center;
+            border-left: 4px solid #27ae60;
+            font-size: 14px;
+        }
+
+        .tab-container {
+            display: flex;
+            border-bottom: 2px solid #e0e0e0;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 14px;
+            color: #666;
+            transition: all 0.3s;
+        }
+
+        .tab.active {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            margin-bottom: -2px;
+            font-weight: bold;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .analyze-btn {
+            background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+            color: white;
+        }
+
+        .demo-btn {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #3498db;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 15px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .results {
+            display: none;
+            margin-top: 20px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .risk-score {
+            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .risk-low { background: #d5f4e6; color: #27ae60; }
+        .risk-medium { background: #fdeaa7; color: #f39c12; }
+        .risk-high { background: #f8d7da; color: #e74c3c; }
+
+        .section {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border-left: 4px solid #3498db;
+        }
+
+        .section h3 {
+            margin-top: 0;
+            color: #2c3e50;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+        }
+
+        .url-item, .attachment-item {
+            background: white;
+            padding: 10px;
+            border-radius: 6px;
+            margin: 8px 0;
+            border-left: 3px solid #34495e;
+            font-size: 12px;
+        }
+
+        .threat-detected {
+            border-left-color: #e74c3c;
+            background: #fdf2f2;
+        }
+
+        .threat-clean {
+            border-left-color: #27ae60;
+            background: #f0f9f0;
+        }
+
+        .threat-score {
+            background: #3498db;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 10px;
+            margin-left: 8px;
+        }
+
+        .risk-factors {
+            background: #fdf2f2;
+            border-left-color: #e74c3c;
+        }
+
+        .risk-factors ul {
+            margin: 8px 0;
+            padding-left: 15px;
+        }
+
+        .risk-factors li {
+            margin: 4px 0;
+            font-size: 12px;
+            color: #721c24;
+        }
+
+        .no-risks {
+            text-align: center;
+            color: #27ae60;
+            font-weight: bold;
+            padding: 15px;
+            background: #d5f4e6;
+            border-radius: 8px;
+        }
+
+        .api-key-form {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+        }
+
+        .api-key-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 12px;
+            color: #2c3e50;
+        }
+
+        .api-key-form input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 12px;
+            font-family: monospace;
+        }
+
+        .api-key-form button {
+            width: 100%;
+            padding: 8px;
+            font-size: 12px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .api-key-status {
+            text-align: center;
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+
+        .api-key-links {
+            font-size: 11px;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .api-key-links a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .api-key-links a:hover {
+            text-decoration: underline;
+        }
+
+        .language-selector {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 4px;
+            padding: 5px;
+        }
+
+        .language-selector select {
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 12px;
+            cursor: pointer;
+            padding: 2px;
+        }
+
+        .language-selector select option {
+            background: #667eea;
+            color: white;
+        }
+
+        /* Scrollbar styling */
+        .results::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .results::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 3px;
+        }
+
+        .results::-webkit-scrollbar-thumb {
+            background: #c1c1c1;
+            border-radius: 3px;
+        }
+
+        .results::-webkit-scrollbar-thumb:hover {
+            background: #a8a8a8;
+        }
+
+        .sender-reputation {
+            background: #f1f5f9;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            font-size: 12px;
+        }
+
+        .reputation-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 5px 0;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 10px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .status-passed { background: #22c55e; }
+        .status-failed { background: #ef4444; }
+        .status-unknown { background: #94a3b8; }
+    </style>
+</head>
+<body>
+    <div class="language-selector">
+        <select id="languageSelector">
+            <option value="en">English</option>
+            <option value="tr">Türkçe</option>
+            <option value="es">Español</option>
+            <option value="de">Deutsch</option>
+        </select>
+    </div>
+
+    <div class="container">
+        <h1>
+            🛡️ <span data-i18n="extensionName">Mail Güvenlik Analizi</span>
+            <div class="logo-container">
+                <img src="https://www.virustotal.com/gui/images/favicon.png" alt="VirusTotal" class="vt-logo">
+                <span style="font-size: 12px; color: #666;">+</span>
+            </div>
+        </h1>
+        
+        <div class="status" id="status">
+            <span data-i18n="loading">Extension yükleniyor...</span>
+        </div>
+
+        <div class="tab-container">
+            <button class="tab active" id="analyzeTab" data-i18n="analyze">Analiz</button>
+            <button class="tab" id="settingsTab" data-i18n="settings">Ayarlar</button>
+        </div>
+
+        <div class="tab-content active" id="analyzeContent">
+            <button class="analyze-btn" id="analyzeBtn">
+                📊 <span data-i18n="analyzeEmail">E-postayı Analiz Et</span>
+            </button>
+            
+            <button class="demo-btn" id="demoBtn">
+                🧪 Demo Phishing Testi
+            </button>
+
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p id="loadingText" data-i18n="loading">Analiz yapılıyor...</p>
+            </div>
+
+            <div class="results" id="results">
+                <div class="risk-score" id="riskScore">
+                    🛡️ <span data-i18n="riskScore">Risk Skoru</span>: <span id="scoreValue">0</span>
+                </div>
+
+                <div class="sender-reputation" id="senderReputationSection" style="display: none;">
+                    <h3>👤 <span data-i18n="senderReputation">Gönderen Güvenilirliği</span></h3>
+                    <div id="senderReputationContent"></div>
+                </div>
+
+                <div class="section">
+                    <h3>
+                        🔗 <span data-i18n="urlAnalysis">URL Analizi</span>
+                        <img src="https://www.virustotal.com/gui/images/favicon.png" alt="VT" style="width: 12px; height: 12px; margin-left: 5px;">
+                    </h3>
+                    <div id="urlResults"></div>
+                </div>
+
+                <div class="section">
+                    <h3>
+                        📎 <span data-i18n="attachmentAnalysis">Ekler</span>
+                        <img src="https://www.virustotal.com/gui/images/favicon.png" alt="VT" style="width: 12px; height: 12px; margin-left: 5px;">
+                    </h3>
+                    <div id="attachmentResults"></div>
+                </div>
+
+                <div class="section">
+                    <h3>⚠️ <span data-i18n="riskFactors">Risk Faktörleri</span></h3>
+                    <div id="riskFactors"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="settingsContent">
+            <div class="api-key-form">
+                <label for="virusTotalApiKey">
+                    <img src="https://www.virustotal.com/gui/images/favicon.png" style="width: 12px; height: 12px;">
+                    VirusTotal API Key:
+                </label>
+                <input type="text" id="virusTotalApiKey" placeholder="Enter your VirusTotal API key...">
+                <div class="api-key-links">
+                    <a href="https://www.virustotal.com/gui/my-apikey" target="_blank">Get API Key</a> |
+                    <a href="https://support.virustotal.com/hc/en-us/articles/115002088769-Please-give-me-an-API-key" target="_blank">Help</a>
+                </div>
+            </div>
+
+            <div class="api-key-form">
+                <label for="abuseIPDBApiKey">
+                    🌐 AbuseIPDB API Key (Optional):
+                </label>
+                <input type="text" id="abuseIPDBApiKey" placeholder="Enter your AbuseIPDB API key...">
+                <div class="api-key-links">
+                    <a href="https://www.abuseipdb.com/register" target="_blank">Get API Key</a> |
+                    <a href="https://docs.abuseipdb.com/" target="_blank">Documentation</a>
+                </div>
+            </div>
+
+            <button id="saveSettings" style="background: #27ae60;">
+                💾 <span data-i18n="save">Kaydet</span>
+            </button>
+
+            <div class="api-key-status" id="settingsStatus" style="display: none;"></div>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+{
+  "extensionName": {
+    "message": "E-posta Güvenlik Analizi",
+    "description": "Eklenti adı"
+  },
+  "extensionDescription": {
+    "message": "Outlook ve Gmail e-postalarını VirusTotal ve çoklu tehdit istihbaratı kaynaklarıyla güvenlik açısından analiz eder",
+    "description": "Eklenti açıklaması"
+  },
+  "analyzeEmail": {
+    "message": "E-postayı Analiz Et",
+    "description": "E-posta analiz butonu metni"
+  },
+  "loading": {
+    "message": "Analiz ediliyor...",
+    "description": "Yükleniyor mesajı"
+  },
+  "riskScore": {
+    "message": "Risk Skoru",
+    "description": "Risk skoru etiketi"
+  },
+  "lowRisk": {
+    "message": "Düşük Risk",
+    "description": "Düşük risk seviyesi"
+  },
+  "mediumRisk": {
+    "message": "Orta Risk",
+    "description": "Orta risk seviyesi"
+  },
+  "highRisk": {
+    "message": "Yüksek Risk",
+    "description": "Yüksek risk seviyesi"
+  },
+  "senderReputation": {
+    "message": "Gönderen Güvenilirliği",
+    "description": "Gönderen güvenilirliği bölüm başlığı"
+  },
+  "domainAge": {
+    "message": "Domain Yaşı",
+    "description": "Domain yaşı etiketi"
+  },
+  "spfStatus": {
+    "message": "SPF Durumu",
+    "description": "SPF durumu etiketi"
+  },
+  "dkimStatus": {
+    "message": "DKIM Durumu",
+    "description": "DKIM durumu etiketi"
+  },
+  "dmarcStatus": {
+    "message": "DMARC Durumu",
+    "description": "DMARC durumu etiketi"
+  },
+  "threatIntelligence": {
+    "message": "Tehdit İstihbaratı",
+    "description": "Tehdit istihbaratı bölüm başlığı"
+  },
+  "urlAnalysis": {
+    "message": "URL Analizi",
+    "description": "URL analizi bölüm başlığı"
+  },
+  "attachmentAnalysis": {
+    "message": "Ek Dosya Analizi",
+    "description": "Ek dosya analizi bölüm başlığı"
+  },
+  "riskFactors": {
+    "message": "Risk Faktörleri",
+    "description": "Risk faktörleri bölüm başlığı"
+  },
+  "noThreatsDetected": {
+    "message": "Tehdit tespit edilmedi",
+    "description": "Tehdit yok mesajı"
+  },
+  "apiKeyRequired": {
+    "message": "API anahtarları gerekli. Lütfen ayarlardan yapılandırın.",
+    "description": "API anahtarı gerekli mesajı"
+  },
+  "settings": {
+    "message": "Ayarlar",
+    "description": "Ayarlar butonu metni"
+  },
+  "save": {
+    "message": "Kaydet",
+    "description": "Kaydet butonu metni"
+  },
+  "virusTotalApiKey": {
+    "message": "VirusTotal API Anahtarı",
+    "description": "VirusTotal API anahtarı etiketi"
+  },
+  "abuseIPDBApiKey": {
+    "message": "AbuseIPDB API Anahtarı",
+    "description": "AbuseIPDB API anahtarı etiketi"
+  },
+  "trustScore": {
+    "message": "Güven Skoru",
+    "description": "Güven skoru etiketi"
+  },
+  "domainRegistered": {
+    "message": "Domain Kayıt Tarihi",
+    "description": "Domain kayıt tarihi etiketi"
+  },
+  "ipReputation": {
+    "message": "IP İtibarı",
+    "description": "IP itibarı etiketi"
+  },
+  "passed": {
+    "message": "Başarılı",
+    "description": "Başarılı durumu"
+  },
+  "failed": {
+    "message": "Başarısız",
+    "description": "Başarısız durumu"
+  },
+  "unknown": {
+    "message": "Bilinmiyor",
+    "description": "Bilinmeyen durumu"
+  },
+  "checking": {
+    "message": "Kontrol ediliyor",
+    "description": "Kontrol ediliyor durumu"
+  }
+}

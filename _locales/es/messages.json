@@ -1,0 +1,254 @@
+{
+  "extensionName": {
+    "message": "Análisis de Seguridad de Correo",
+    "description": "Nombre de la extensión"
+  },
+  "extensionDescription": {
+    "message": "Analiza correos de Outlook y Gmail para detectar amenazas de seguridad usando VirusTotal y múltiples fuentes de inteligencia",
+    "description": "Descripción de la extensión"
+  },
+  "analyzeEmail": {
+    "message": "Analizar Correo",
+    "description": "Texto del botón para análisis de correo"
+  },
+  "loading": {
+    "message": "Analizando...",
+    "description": "Mensaje de carga"
+  },
+  "riskScore": {
+    "message": "Puntuación de Riesgo",
+    "description": "Etiqueta de puntuación de riesgo"
+  },
+  "lowRisk": {
+    "message": "Riesgo Bajo",
+    "description": "Nivel de riesgo bajo"
+  },
+  "mediumRisk": {
+    "message": "Riesgo Medio",
+    "description": "Nivel de riesgo medio"
+  },
+  "highRisk": {
+    "message": "Riesgo Alto",
+    "description": "Nivel de riesgo alto"
+  },
+  "senderReputation": {
+    "message": "Reputación del Remitente",
+    "description": "Título de la sección de reputación del remitente"
+  },
+  "domainAge": {
+    "message": "Antigüedad del Dominio",
+    "description": "Etiqueta de antigüedad del dominio"
+  },
+  "spfStatus": {
+    "message": "Estado SPF",
+    "description": "Etiqueta de estado SPF"
+  },
+  "dkimStatus": {
+    "message": "Estado DKIM",
+    "description": "Etiqueta de estado DKIM"
+  },
+  "dmarcStatus": {
+    "message": "Estado DMARC",
+    "description": "Etiqueta de estado DMARC"
+  },
+  "threatIntelligence": {
+    "message": "Inteligencia de Amenazas",
+    "description": "Título de la sección de inteligencia de amenazas"
+  },
+  "urlAnalysis": {
+    "message": "Análisis de URL",
+    "description": "Título de la sección de análisis de URL"
+  },
+  "attachmentAnalysis": {
+    "message": "Análisis de Archivos Adjuntos",
+    "description": "Título de la sección de análisis de archivos adjuntos"
+  },
+  "riskFactors": {
+    "message": "Factores de Riesgo",
+    "description": "Título de la sección de factores de riesgo"
+  },
+  "noThreatsDetected": {
+    "message": "No se detectaron amenazas",
+    "description": "Mensaje sin amenazas"
+  },
+  "apiKeyRequired": {
+    "message": "Se requieren claves API. Por favor, configúrelas en ajustes.",
+    "description": "Mensaje de clave API requerida"
+  },
+  "settings": {
+    "message": "Ajustes",
+    "description": "Texto del botón de ajustes"
+  },
+  "save": {
+    "message": "Guardar",
+    "description": "Texto del botón guardar"
+  },
+  "virusTotalApiKey": {
+    "message": "Clave API de VirusTotal",
+    "description": "Etiqueta de clave API de VirusTotal"
+  },
+  "abuseIPDBApiKey": {
+    "message": "Clave API de AbuseIPDB",
+    "description": "Etiqueta de clave API de AbuseIPDB"
+  },
+  "trustScore": {
+    "message": "Puntuación de Confianza",
+    "description": "Etiqueta de puntuación de confianza"
+  },
+  "domainRegistered": {
+    "message": "Dominio Registrado",
+    "description": "Etiqueta de fecha de registro del dominio"
+  },
+  "ipReputation": {
+    "message": "Reputación de IP",
+    "description": "Etiqueta de reputación de IP"
+  },
+  "passed": {
+    "message": "Aprobado",
+    "description": "Estado aprobado"
+  },
+  "failed": {
+    "message": "Fallido",
+    "description": "Estado fallido"
+  },
+  "unknown": {
+    "message": "Desconocido",
+    "description": "Estado desconocido"
+  },
+  "checking": {
+    "message": "Verificando",
+    "description": "Estado verificando"
+  },
+  "analyze": {
+    "message": "Analizar",
+    "description": "Pestaña de análisis"
+  },
+  "ready": {
+    "message": "Listo",
+    "description": "Estado listo"
+  },
+  "checkingContentScript": {
+    "message": "Verificando script de contenido...",
+    "description": "Mensaje de verificación de script de contenido"
+  },
+  "notOnMailSite": {
+    "message": "No está en una página de Outlook o Gmail",
+    "description": "Mensaje de sitio no válido"
+  },
+  "contentScriptNotResponding": {
+    "message": "El script de contenido no responde",
+    "description": "Mensaje de script no responde"
+  },
+  "load": {
+    "message": "Cargar",
+    "description": "Texto del botón cargar"
+  },
+  "error": {
+    "message": "Error",
+    "description": "Mensaje de error"
+  },
+  "loadingContentScript": {
+    "message": "Cargando script de contenido...",
+    "description": "Mensaje de carga de script"
+  },
+  "contentScriptLoaded": {
+    "message": "¡Script de contenido cargado!",
+    "description": "Mensaje de script cargado"
+  },
+  "errorLoadingContentScript": {
+    "message": "Error al cargar el script de contenido",
+    "description": "Mensaje de error de carga de script"
+  },
+  "contentScriptNotReady": {
+    "message": "El script de contenido no está listo o falta información de la pestaña",
+    "description": "Mensaje de script no listo"
+  },
+  "analyzingEmail": {
+    "message": "Analizando correo electrónico...",
+    "description": "Mensaje de análisis de correo"
+  },
+  "analysisComplete": {
+    "message": "Análisis completo",
+    "description": "Mensaje de análisis completo"
+  },
+  "analysisError": {
+    "message": "Error de análisis",
+    "description": "Mensaje de error de análisis"
+  },
+  "preparingDemo": {
+    "message": "Preparando análisis de demostración...",
+    "description": "Mensaje de preparación de demo"
+  },
+  "checkingSenderReputation": {
+    "message": "Verificando reputación del remitente...",
+    "description": "Mensaje de verificación de remitente"
+  },
+  "analyzingUrls": {
+    "message": "Analizando URLs con VirusTotal y AbuseIPDB...",
+    "description": "Mensaje de análisis de URLs"
+  },
+  "analyzingAttachments": {
+    "message": "Analizando archivos adjuntos...",
+    "description": "Mensaje de análisis de adjuntos"
+  },
+  "highRiskDetected": {
+    "message": "¡Riesgo alto detectado!",
+    "description": "Mensaje de riesgo alto detectado"
+  },
+  "apiKeySet": {
+    "message": "Clave API configurada",
+    "description": "Marcador de posición para clave API configurada"
+  },
+  "settingsSaved": {
+    "message": "¡Ajustes guardados exitosamente!",
+    "description": "Mensaje de ajustes guardados"
+  },
+  "noChanges": {
+    "message": "No hay cambios para guardar",
+    "description": "Mensaje sin cambios"
+  },
+  "errorSavingSettings": {
+    "message": "Error al guardar ajustes",
+    "description": "Mensaje de error al guardar"
+  },
+  "noUrlsFound": {
+    "message": "No se encontraron URLs en este correo.",
+    "description": "Mensaje sin URLs"
+  },
+  "noAttachmentsFound": {
+    "message": "No se encontraron archivos adjuntos en este correo.",
+    "description": "Mensaje sin adjuntos"
+  },
+  "noRiskFactorsDetected": {
+    "message": "No se detectaron factores de riesgo significativos",
+    "description": "Mensaje sin factores de riesgo"
+  },
+  "doNotClick": {
+    "message": "¡No hacer clic!",
+    "description": "Advertencia de no hacer clic"
+  },
+  "size": {
+    "message": "Tamaño",
+    "description": "Etiqueta de tamaño"
+  },
+  "dangerous": {
+    "message": "PELIGROSO",
+    "description": "Etiqueta de peligroso"
+  },
+  "doNotDownload": {
+    "message": "¡No descargar!",
+    "description": "Advertencia de no descargar"
+  },
+  "hideDetails": {
+    "message": "Ocultar Detalles",
+    "description": "Texto del botón ocultar detalles"
+  },
+  "showDetails": {
+    "message": "Mostrar Detalles",
+    "description": "Texto del botón mostrar detalles"
+  },
+  "analysisInProgress": {
+    "message": "El análisis ya está en progreso",
+    "description": "Mensaje de análisis en progreso"
+  }
+}

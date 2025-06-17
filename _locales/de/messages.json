@@ -1,0 +1,254 @@
+{
+  "extensionName": {
+    "message": "E-Mail Sicherheitsanalyse",
+    "description": "Name der Erweiterung"
+  },
+  "extensionDescription": {
+    "message": "Analysiert Outlook und Gmail E-Mails auf Sicherheitsbedrohungen mit VirusTotal und mehreren Threat Intelligence Quellen",
+    "description": "Beschreibung der Erweiterung"
+  },
+  "analyzeEmail": {
+    "message": "E-Mail analysieren",
+    "description": "Button-Text für E-Mail-Analyse"
+  },
+  "loading": {
+    "message": "Analysiere...",
+    "description": "Lademeldung"
+  },
+  "riskScore": {
+    "message": "Risikobewertung",
+    "description": "Risikobewertungs-Label"
+  },
+  "lowRisk": {
+    "message": "Niedriges Risiko",
+    "description": "Niedriges Risikolevel"
+  },
+  "mediumRisk": {
+    "message": "Mittleres Risiko",
+    "description": "Mittleres Risikolevel"
+  },
+  "highRisk": {
+    "message": "Hohes Risiko",
+    "description": "Hohes Risikolevel"
+  },
+  "senderReputation": {
+    "message": "Absender-Reputation",
+    "description": "Titel des Absender-Reputationsbereichs"
+  },
+  "domainAge": {
+    "message": "Domain-Alter",
+    "description": "Domain-Alter Label"
+  },
+  "spfStatus": {
+    "message": "SPF-Status",
+    "description": "SPF-Status Label"
+  },
+  "dkimStatus": {
+    "message": "DKIM-Status",
+    "description": "DKIM-Status Label"
+  },
+  "dmarcStatus": {
+    "message": "DMARC-Status",
+    "description": "DMARC-Status Label"
+  },
+  "threatIntelligence": {
+    "message": "Bedrohungsinformationen",
+    "description": "Titel des Bedrohungsinformationsbereichs"
+  },
+  "urlAnalysis": {
+    "message": "URL-Analyse",
+    "description": "Titel des URL-Analysebereichs"
+  },
+  "attachmentAnalysis": {
+    "message": "Anhang-Analyse",
+    "description": "Titel des Anhang-Analysebereichs"
+  },
+  "riskFactors": {
+    "message": "Risikofaktoren",
+    "description": "Titel des Risikofaktorenbereichs"
+  },
+  "noThreatsDetected": {
+    "message": "Keine Bedrohungen erkannt",
+    "description": "Keine Bedrohungen Meldung"
+  },
+  "apiKeyRequired": {
+    "message": "API-Schlüssel erforderlich. Bitte in den Einstellungen konfigurieren.",
+    "description": "API-Schlüssel erforderlich Meldung"
+  },
+  "settings": {
+    "message": "Einstellungen",
+    "description": "Einstellungen Button-Text"
+  },
+  "save": {
+    "message": "Speichern",
+    "description": "Speichern Button-Text"
+  },
+  "virusTotalApiKey": {
+    "message": "VirusTotal API-Schlüssel",
+    "description": "VirusTotal API-Schlüssel Label"
+  },
+  "abuseIPDBApiKey": {
+    "message": "AbuseIPDB API-Schlüssel",
+    "description": "AbuseIPDB API-Schlüssel Label"
+  },
+  "trustScore": {
+    "message": "Vertrauenswürdigkeit",
+    "description": "Vertrauenswürdigkeits-Label"
+  },
+  "domainRegistered": {
+    "message": "Domain registriert",
+    "description": "Domain-Registrierungsdatum Label"
+  },
+  "ipReputation": {
+    "message": "IP-Reputation",
+    "description": "IP-Reputations Label"
+  },
+  "passed": {
+    "message": "Bestanden",
+    "description": "Bestanden Status"
+  },
+  "failed": {
+    "message": "Fehlgeschlagen",
+    "description": "Fehlgeschlagen Status"
+  },
+  "unknown": {
+    "message": "Unbekannt",
+    "description": "Unbekannt Status"
+  },
+  "checking": {
+    "message": "Prüfe",
+    "description": "Prüfe Status"
+  },
+  "analyze": {
+    "message": "Analysieren",
+    "description": "Analyse-Tab"
+  },
+  "ready": {
+    "message": "Bereit",
+    "description": "Bereit Status"
+  },
+  "checkingContentScript": {
+    "message": "Prüfe Content-Script...",
+    "description": "Content-Script Prüfmeldung"
+  },
+  "notOnMailSite": {
+    "message": "Nicht auf Outlook oder Gmail Seite",
+    "description": "Ungültige Seite Meldung"
+  },
+  "contentScriptNotResponding": {
+    "message": "Content-Script antwortet nicht",
+    "description": "Script antwortet nicht Meldung"
+  },
+  "load": {
+    "message": "Laden",
+    "description": "Laden Button-Text"
+  },
+  "error": {
+    "message": "Fehler",
+    "description": "Fehlermeldung"
+  },
+  "loadingContentScript": {
+    "message": "Lade Content-Script...",
+    "description": "Script-Lademeldung"
+  },
+  "contentScriptLoaded": {
+    "message": "Content-Script geladen!",
+    "description": "Script geladen Meldung"
+  },
+  "errorLoadingContentScript": {
+    "message": "Fehler beim Laden des Content-Scripts",
+    "description": "Script-Ladefehler Meldung"
+  },
+  "contentScriptNotReady": {
+    "message": "Content-Script nicht bereit oder Tab-Information fehlt",
+    "description": "Script nicht bereit Meldung"
+  },
+  "analyzingEmail": {
+    "message": "Analysiere E-Mail...",
+    "description": "E-Mail-Analyse Meldung"
+  },
+  "analysisComplete": {
+    "message": "Analyse abgeschlossen",
+    "description": "Analyse abgeschlossen Meldung"
+  },
+  "analysisError": {
+    "message": "Analysefehler",
+    "description": "Analysefehler Meldung"
+  },
+  "preparingDemo": {
+    "message": "Bereite Demo-Analyse vor...",
+    "description": "Demo-Vorbereitungsmeldung"
+  },
+  "checkingSenderReputation": {
+    "message": "Prüfe Absender-Reputation...",
+    "description": "Absender-Prüfmeldung"
+  },
+  "analyzingUrls": {
+    "message": "Analysiere URLs mit VirusTotal und AbuseIPDB...",
+    "description": "URL-Analyse Meldung"
+  },
+  "analyzingAttachments": {
+    "message": "Analysiere Anhänge...",
+    "description": "Anhang-Analyse Meldung"
+  },
+  "highRiskDetected": {
+    "message": "Hohes Risiko erkannt!",
+    "description": "Hohes Risiko erkannt Meldung"
+  },
+  "apiKeySet": {
+    "message": "API-Schlüssel gesetzt",
+    "description": "API-Schlüssel gesetzt Platzhalter"
+  },
+  "settingsSaved": {
+    "message": "Einstellungen erfolgreich gespeichert!",
+    "description": "Einstellungen gespeichert Meldung"
+  },
+  "noChanges": {
+    "message": "Keine Änderungen zum Speichern",
+    "description": "Keine Änderungen Meldung"
+  },
+  "errorSavingSettings": {
+    "message": "Fehler beim Speichern der Einstellungen",
+    "description": "Speicherfehler Meldung"
+  },
+  "noUrlsFound": {
+    "message": "Keine URLs in dieser E-Mail gefunden.",
+    "description": "Keine URLs Meldung"
+  },
+  "noAttachmentsFound": {
+    "message": "Keine Anhänge in dieser E-Mail gefunden.",
+    "description": "Keine Anhänge Meldung"
+  },
+  "noRiskFactorsDetected": {
+    "message": "Keine signifikanten Risikofaktoren erkannt",
+    "description": "Keine Risikofaktoren Meldung"
+  },
+  "doNotClick": {
+    "message": "Nicht anklicken!",
+    "description": "Nicht anklicken Warnung"
+  },
+  "size": {
+    "message": "Größe",
+    "description": "Größen-Label"
+  },
+  "dangerous": {
+    "message": "GEFÄHRLICH",
+    "description": "Gefährlich Label"
+  },
+  "doNotDownload": {
+    "message": "Nicht herunterladen!",
+    "description": "Nicht herunterladen Warnung"
+  },
+  "hideDetails": {
+    "message": "Details verbergen",
+    "description": "Details verbergen Button-Text"
+  },
+  "showDetails": {
+    "message": "Details anzeigen",
+    "description": "Details anzeigen Button-Text"
+  },
+  "analysisInProgress": {
+    "message": "Analyse läuft bereits",
+    "description": "Analyse läuft Meldung"
+  }
+}

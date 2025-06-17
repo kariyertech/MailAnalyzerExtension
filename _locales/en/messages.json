@@ -1,0 +1,122 @@
+{
+  "extensionName": {
+    "message": "Email Security Analysis",
+    "description": "Extension name"
+  },
+  "extensionDescription": {
+    "message": "Analyzes Outlook and Gmail emails for security threats using VirusTotal and multiple threat intelligence sources",
+    "description": "Extension description"
+  },
+  "analyzeEmail": {
+    "message": "Analyze Email",
+    "description": "Button text for email analysis"
+  },
+  "loading": {
+    "message": "Analyzing...",
+    "description": "Loading message"
+  },
+  "riskScore": {
+    "message": "Risk Score",
+    "description": "Risk score label"
+  },
+  "lowRisk": {
+    "message": "Low Risk",
+    "description": "Low risk level"
+  },
+  "mediumRisk": {
+    "message": "Medium Risk",
+    "description": "Medium risk level"
+  },
+  "highRisk": {
+    "message": "High Risk",
+    "description": "High risk level"
+  },
+  "senderReputation": {
+    "message": "Sender Reputation",
+    "description": "Sender reputation section title"
+  },
+  "domainAge": {
+    "message": "Domain Age",
+    "description": "Domain age label"
+  },
+  "spfStatus": {
+    "message": "SPF Status",
+    "description": "SPF status label"
+  },
+  "dkimStatus": {
+    "message": "DKIM Status",
+    "description": "DKIM status label"
+  },
+  "dmarcStatus": {
+    "message": "DMARC Status",
+    "description": "DMARC status label"
+  },
+  "threatIntelligence": {
+    "message": "Threat Intelligence",
+    "description": "Threat intelligence section title"
+  },
+  "urlAnalysis": {
+    "message": "URL Analysis",
+    "description": "URL analysis section title"
+  },
+  "attachmentAnalysis": {
+    "message": "Attachment Analysis",
+    "description": "Attachment analysis section title"
+  },
+  "riskFactors": {
+    "message": "Risk Factors",
+    "description": "Risk factors section title"
+  },
+  "noThreatsDetected": {
+    "message": "No threats detected",
+    "description": "No threats message"
+  },
+  "apiKeyRequired": {
+    "message": "API keys required. Please configure in settings.",
+    "description": "API key required message"
+  },
+  "settings": {
+    "message": "Settings",
+    "description": "Settings button text"
+  },
+  "save": {
+    "message": "Save",
+    "description": "Save button text"
+  },
+  "virusTotalApiKey": {
+    "message": "VirusTotal API Key",
+    "description": "VirusTotal API key label"
+  },
+  "abuseIPDBApiKey": {
+    "message": "AbuseIPDB API Key",
+    "description": "AbuseIPDB API key label"
+  },
+  "trustScore": {
+    "message": "Trust Score",
+    "description": "Trust score label"
+  },
+  "domainRegistered": {
+    "message": "Domain Registered",
+    "description": "Domain registration date label"
+  },
+  "ipReputation": {
+    "message": "IP Reputation",
+    "description": "IP reputation label"
+  },
+  "passed": {
+    "message": "Passed",
+    "description": "Passed status"
+  },
+  "failed": {
+    "message": "Failed",
+    "description": "Failed status"
+  },
+  "unknown": {
+    "message": "Unknown",
+    "description": "Unknown status"
+  },
+  "checking": {
+    "message": "Checking",
+    "description": "Checking status"
+  }
+}
